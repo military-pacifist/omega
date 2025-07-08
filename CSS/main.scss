@@ -224,10 +224,10 @@ footer {
         // background-color: purple;
         padding-right: 2.5rem;
         width: 40%;
-
         p {
             text-align: start;
             font-size: 1.2rem;
+            color: $color-block;
         }
     }
 
@@ -240,7 +240,7 @@ footer {
             display: block;
             font-size: 1.1rem;
             text-decoration: none;
-            color: black;
+            color: $color-bg;
         }
     }
 
