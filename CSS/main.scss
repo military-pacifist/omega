@@ -13,10 +13,18 @@ $color-block: #f03d3d;
 
 body {
     background-color: #FFFFFF;
+    height: 100%;
+}
+
+main {
+    flex: 1;
 }
 
 .wrapper {
     background-color: $color-bg;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
