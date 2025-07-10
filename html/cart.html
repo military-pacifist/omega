@@ -3,71 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="../CSS/main.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo"> ХУИ НА БЛЮДЕ</div>
-            <nav>
-                <ul class="menu">
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <div class="logo"> ХУИ НА БЛЮДЕ</div>
+                <nav>
                     <ul class="menu">
-                        <li><a href="index.html">ГЛАВНАЯ</a></li>
-                        <li><a href="music.html">МУЗЫКА</a></li>
-                        <li><a href="pictures.html">КАРТИНЫ</a></li>
-                        <li><a href="HypeShit.html">КНИГИ</a></li>
-                        <li><a href="future.html">БУДУЩИЕ ПРОЕКТЫ</a></li>
-                        <li><a href="gang.html">НАШ ГЭНГ</a></li>    
-                    </ul> 
-                </ul>
-            </nav>
-            <div class="user-panel">
-                <a href="#" class="search-icon" title="Поиск">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                    </svg>
-                </a>
-                <a href="cart.html" class="cart" title="Корзина">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
-                    </svg>
-                </a>
+                        <ul class="menu">
+                            <li><a href="index.html">ГЛАВНАЯ</a></li>
+                            <li><a href="music.html">МУЗЫКА</a></li>
+                            <li><a href="pictures.html">КАРТИНЫ</a></li>
+                            <li><a href="HypeShit.html">КНИГИ</a></li>
+                            <li><a href="future.html">БУДУЩИЕ ПРОЕКТЫ</a></li>
+                            <li><a href="gang.html">НАШ ГЭНГ</a></li>    
+                        </ul> 
+                    </ul>
+                </nav>
+                <div class="user-panel">
+                    <a href="#" class="search-icon" title="Поиск">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </a>
+    
+                    <a href="cart.html" class="cart" title="Корзина">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                        </svg>
+                    </a>
+                </div>
             </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <h2>Корзина</h2>
-            <button onclick="
-                console.log(`Cart quantity: ${cartQuantity}`);
-            "></button>
-
-            <button onclick="
-                cartQuantity ++;
-                console.log(`Cart quantity: ${cartQuantity}`);
-            "> В корзину</button>
-
-            <button onclick="
-                cartQuantity += 2;
-                console.log(`Cart quantity: ${cartQuantity}`);
-            ">+2</button>
-
-            <button onclick="
-                cartQuantity += 3;
-                console.log(`Cart quantity: ${cartQuantity}`);
-            ">+3</button>
-
-            <button onclick="
-                cartQuantity = 0;
-                console.log('Cart was reset')
-                console.log(`Cart quantity: ${cartQuantity}`);
-            ">Очистить корзину</button>
-
-        </div>
-    </main>
-    <footer>
+        </header>
+    
+        <main>
+            <div class="container">
+                <h2>Корзина</h2>
+                <button onclick="
+                    console.log(`Cart quantity: ${cartQuantity}`);
+                "></button>
+    
+                <button onclick="
+                    cartQuantity ++;
+                    console.log(`Cart quantity: ${cartQuantity}`);
+                "> В корзину</button>
+    
+                <button onclick="
+                    cartQuantity += 2;
+                    console.log(`Cart quantity: ${cartQuantity}`);
+                ">+2</button>
+    
+                <button onclick="
+                    cartQuantity += 3;
+                    console.log(`Cart quantity: ${cartQuantity}`);
+                ">+3</button>
+    
+                <button onclick="
+                    cartQuantity = 0;
+                    console.log('Cart was reset')
+                    console.log(`Cart quantity: ${cartQuantity}`);
+                ">Очистить корзину</button>
+    
+            </div>
+        </main>
+        
+        <footer>
             <div class="footer-box">
                 <h3>ООО "Рыцари Скотоублюдии"</h3>
                 <p>Все права защищены, можешь не сомневаться. Бездумное и бездарное копирование регулируется законодательством той помойки, которую ты называешь родиной. Тыкайся в наш сайт и не выебывайся, плесень.</p>
@@ -100,6 +103,7 @@
                 </div>
             </div>
         </footer>
+    </div>
     <script src="../JS/script.js"></script>
 </body>
 </html>
