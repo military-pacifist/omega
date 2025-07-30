@@ -203,28 +203,35 @@ header .header-container .user-panel a:hover svg {
   gap: 20px;
 }
 .h-offers-cata-book {
+  height: 290px;
   width: calc(50% - 10px);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #f03d3d;
-  background-clip: border-box;
   padding: 20px;
 }
 .h-offers-cata-book img {
-  max-width: 200px;
+  height: 250px;
 }
 .h-offers-cata-book p {
   margin-left: 20px;
   font-size: 20px;
 }
-
 .h-leave {
   margin-bottom: 70px;
 }
