@@ -171,6 +171,23 @@ header {
     }
 }
 
+.m-offers {
+    margin-bottom: 70px;
+}
+
+.m-albume {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    gap: 20px;
+    
+    &-card {
+        display: flex;
+        
+    }
+}
+
 .h-intro {
     padding: 50px 0;
     &-text {
