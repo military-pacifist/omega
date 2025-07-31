@@ -227,17 +227,20 @@ header {
         gap: 20px;
 
         &-book {
+            height: 290px;
             width: calc(50% - 10px);
             box-sizing: border-box;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
             background-color: $color-block;
-            background-clip: border-box;
             padding: 20px;
 
             img {
-                max-width: 200px;
-            }
+                height: 250px;
+            }   
 
             p {
                 margin-left: 20px;

@@ -201,16 +201,19 @@ header .header-container .user-panel a:hover svg {
   gap: 20px;
 }
 .h-offers-cata-book {
+  height: 290px;
   width: calc(50% - 10px);
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: #f03d3d;
-  background-clip: border-box;
   padding: 20px;
 }
 .h-offers-cata-book img {
-  max-width: 200px;
+  height: 250px;
 }
 .h-offers-cata-book p {
   margin-left: 20px;
