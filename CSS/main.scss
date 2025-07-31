@@ -1,5 +1,5 @@
 $color-primary: #8A2D3B;
-$color-bg: #FBDB93;
+$color-bg: #1a1917;
 $color-text: #641B2E;
 $color-block: #f03d3d;
 
@@ -88,6 +88,8 @@ header {
                 }
             }
         }
+
+        
 
         .user-panel {
             display: flex;
@@ -178,12 +180,34 @@ header {
 .m-albume {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-
     gap: 20px;
     
     &-card {
         display: flex;
+        width: 400px;
+        padding: 10px;
+        background: color-mix(in srgb, #{$color-bg} 70%, white);
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+        .track-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s ease-out;
+            padding: 0 15px;
+        }
+        .track-list.open {
+            max-height: 1000px;
+            padding: 10px 15px;
+        }
+
+        .track {
+            margin-bottom: 10px;
+        }
+
         
     }
 }
