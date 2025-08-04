@@ -183,50 +183,48 @@ header {
     margin-bottom: 70px;
     .m-music {
         border-radius: 10px;
+        height: 800px;
         background: color-mix(in srgb, #{$color-bg} 85%, white)
     }
 }
 
-.m-albume {
+.m-album {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
+    overflow-x: auto;
+    padding: 10px;
     
-    .albume-wrapper {
+    .album-wrapper {
         display: flex;
-        flex-direction: row;
-        height: 300px;
+        cursor: pointer;
+        flex-direction: column;
         padding: 10px 10px 30px;
-        background: color-mix(in srgb, #{$color-bg} 70%, white);
         border-radius: 10px;
         transition: transform 0.3s ease;
-        figure {
-            img {
-            height: 300px;
+        img {
+            width: 100%;
+            max-width: 300px;
             border-radius: 10px;
-            }
-        } 
+        }
         
         &:hover {
             transform: scale(1.03);
+            background: color-mix(in srgb, #{$color-bg} 70%, white);
         }
-        .track-list {
+    }
+    .track-list {
             display: flex;
             flex-direction: column;
-            max-width: 0;
-            overflow: hidden;
-            transition: max-width 0.8s ease-out;
             padding: 15px 0px;
+            width: 100%;
         }
-        .track-list.open {
-            max-width: 1000px;
-            padding: 15px 15px;
+        .hidden {
+            display: none;
         }
+        
         .track {
             margin-bottom: 10px;
         }
-    }
 }
 
 .h-intro {

@@ -163,51 +163,43 @@ header .header-container .user-panel a:hover svg {
 }
 .m-offers .m-music {
   border-radius: 10px;
+  height: 800px;
   background: color-mix(in srgb, #b2965e 85%, white);
 }
 
-.m-albume {
+.m-album {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: row;
+  overflow-x: auto;
+  padding: 10px;
 }
-.m-albume-card {
+.m-album .album-wrapper {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 300px;
+  cursor: pointer;
+  flex-direction: column;
   padding: 10px 10px 30px;
-  background: color-mix(in srgb, #b2965e 70%, white);
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
-.m-albume .albume-wrapper figure img {
-  height: 300px;
+.m-album .album-wrapper img {
+  width: 100%;
+  max-width: 300px;
   border-radius: 10px;
 }
-.m-albume-card:hover {
+.m-album .album-wrapper:hover {
   transform: scale(1.03);
+  background: color-mix(in srgb, #b2965e 70%, white);
 }
-.m-albume .albume-wrapper .track-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.m-album .track-list {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-width: 0;
-  overflow: hidden;
-  transition: max-height 0.8s ease-out;
-  padding: 0 15px;
+  flex-direction: column;
+  padding: 15px 0px;
+  width: 100%;
 }
-.m-albume .albume-wrapper .track-list.open {
-  max-width: 1000px;
-  padding: 15px 15px;
+.m-album .hidden {
+  display: none;
 }
-.m-albume .albume-wrapper .track {
+.m-album .track {
   margin-bottom: 10px;
 }
 
