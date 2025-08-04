@@ -8,7 +8,6 @@
 }
 
 body {
-  background-color: #FFFFFF;
   height: 100%;
 }
 
@@ -169,13 +168,15 @@ header .header-container .user-panel a:hover svg {
 
 .m-albume {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
 }
-.m-albume .albume-wrapper {
+.m-albume-card {
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: 300px;
   padding: 10px 10px 30px;
   background: color-mix(in srgb, #b2965e 70%, white);
@@ -186,16 +187,21 @@ header .header-container .user-panel a:hover svg {
   height: 300px;
   border-radius: 10px;
 }
-.m-albume .albume-wrapper:hover {
+.m-albume-card:hover {
   transform: scale(1.03);
 }
 .m-albume .albume-wrapper .track-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 0;
   overflow: hidden;
-  transition: max-width 0.8s ease-out;
-  padding: 15px 0px;
+  transition: max-height 0.8s ease-out;
+  padding: 0 15px;
 }
 .m-albume .albume-wrapper .track-list.open {
   max-width: 1000px;
