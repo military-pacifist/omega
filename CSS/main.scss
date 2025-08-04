@@ -182,8 +182,10 @@ header {
 
 .m-offers {
     margin-bottom: 70px;
-    border-radius: 10px;
-    background: color-mix(in srgb, #{$color-bg} 85%, white)
+    .m-music {
+        border-radius: 10px;
+        background: color-mix(in srgb, #{$color-bg} 85%, white)
+    }
 }
 
 .m-albume {
