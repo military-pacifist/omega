@@ -1,5 +1,5 @@
 $color-primary: #8A2D3B;
-$color-bg: #1a1917;
+$color-bg: #b2965e;
 $color-text: #641B2E;
 $color-block: #f03d3d;
 
@@ -40,6 +40,13 @@ h2 {
     color: $color-primary;
 }
 
+h3 {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    margin: 1rem auto 2rem;
+    color: $color-text;
+}
 p {
     font-weight: 400;
     font-size: 30px;
@@ -175,40 +182,49 @@ header {
 
 .m-offers {
     margin-bottom: 70px;
+    border-radius: 10px;
+    background: color-mix(in srgb, #{$color-bg} 85%, white)
 }
 
 .m-albume {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     
-    &-card {
+    .albume-wrapper {
         display: flex;
-        width: 400px;
-        padding: 10px;
+        flex-direction: row;
+        height: 300px;
+        padding: 10px 10px 30px;
         background: color-mix(in srgb, #{$color-bg} 70%, white);
         border-radius: 10px;
         transition: transform 0.3s ease;
-
+        figure {
+            img {
+            height: 300px;
+            border-radius: 10px;
+            }
+        } 
+        
         &:hover {
             transform: scale(1.03);
         }
         .track-list {
-            max-height: 0;
+            display: flex;
+            flex-direction: column;
+            max-width: 0;
             overflow: hidden;
-            transition: max-height 0.8s ease-out;
-            padding: 0 15px;
+            transition: max-width 0.8s ease-out;
+            padding: 15px 0px;
         }
         .track-list.open {
-            max-height: 1000px;
-            padding: 10px 15px;
+            max-width: 1000px;
+            padding: 15px 15px;
         }
-
         .track {
             margin-bottom: 10px;
         }
-
-        
     }
 }
 
