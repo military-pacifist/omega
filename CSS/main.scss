@@ -241,8 +241,7 @@ header {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
-
-        &-book {
+        .product-card {
             height: 290px;
             width: calc(50% - 10px);
             box-sizing: border-box;

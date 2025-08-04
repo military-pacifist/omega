@@ -13,13 +13,18 @@ body {
 }
 
 main {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .wrapper {
-  background-color: #b2965e;
+  background-color: #1a1917;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
 }
 
@@ -60,10 +65,18 @@ header .header-container {
   margin: 0 auto;
   min-height: 3rem;
   padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 header .header-container .logo {
   margin-right: 2rem;
@@ -72,9 +85,15 @@ header .header-container .logo {
   white-space: nowrap;
 }
 header .header-container nav .menu {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 header .header-container nav .menu li {
   margin: 0 0.5rem;
@@ -82,6 +101,7 @@ header .header-container nav .menu li {
 header .header-container nav .menu li a {
   color: #FFFFFF;
   padding: 1rem 1rem;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 header .header-container nav .menu li a:hover {
@@ -89,18 +109,29 @@ header .header-container nav .menu li a:hover {
   border-radius: 4px;
 }
 header .header-container .user-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1.5rem;
 }
 header .header-container .user-panel a {
   display: block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 36px;
   height: 36px;
   text-decoration: none;
+  -webkit-transition: stroke 0.2s ease-in-out;
   transition: stroke 0.2s ease-in-out;
 }
 header .header-container .user-panel svg {
@@ -166,25 +197,25 @@ header .header-container .user-panel a:hover svg {
 }
 
 .m-albume {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
 }
-.m-albume .albume-wrapper {
+.m-albume-card {
   display: flex;
   flex-direction: row;
   height: 300px;
   padding: 10px 10px 30px;
   background: color-mix(in srgb, #b2965e 70%, white);
   border-radius: 10px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-.m-albume .albume-wrapper figure img {
-  height: 300px;
-  border-radius: 10px;
-}
-.m-albume .albume-wrapper:hover {
+.m-albume-card:hover {
   transform: scale(1.03);
 }
 .m-albume .albume-wrapper .track-list {
@@ -192,8 +223,8 @@ header .header-container .user-panel a:hover svg {
   flex-direction: column;
   max-width: 0;
   overflow: hidden;
-  transition: max-width 0.8s ease-out;
-  padding: 15px 0px;
+  transition: max-height 0.8s ease-out;
+  padding: 0 15px;
 }
 .m-albume .albume-wrapper .track-list.open {
   max-width: 1000px;
@@ -214,26 +245,40 @@ header .header-container .user-panel a:hover svg {
   margin-bottom: 70px;
 }
 .h-offers-cata {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 20px;
 }
-.h-offers-cata-book {
+.h-offers-cata .product-card {
   height: 290px;
   width: calc(50% - 10px);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #f03d3d;
   padding: 20px;
 }
-.h-offers-cata-book img {
+.h-offers-cata .product-card img {
   height: 250px;
 }
-.h-offers-cata-book p {
+.h-offers-cata .product-card p {
   margin-left: 20px;
   font-size: 20px;
 }
@@ -244,15 +289,26 @@ header .header-container .user-panel a:hover svg {
 
 footer {
   background-color: #641B2E;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   min-height: 8rem;
   padding: 2rem 4rem;
 }
 footer .footer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 footer .footer-box h3 {
   margin-bottom: 2rem;
@@ -280,16 +336,25 @@ footer .footer-box:nth-child(2) a {
 }
 footer .footer-box:last-child {
   width: 20%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 footer .footer-box:last-child h3 {
   text-align: center;
 }
 footer .footer-box:last-child .footer-box-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.8rem;
   width: 152px;
   line-height: 0;
