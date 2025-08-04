@@ -42,7 +42,6 @@ h2 {
 h3 {
     font-weight: 700;
     font-size: 24px;
-    text-align: center;
     margin: 1rem auto 2rem;
     color: $color-text;
 }
@@ -183,7 +182,6 @@ header {
     margin-bottom: 70px;
     .m-music {
         border-radius: 10px;
-        height: 800px;
         background: color-mix(in srgb, #{$color-bg} 85%, white)
     }
 }
@@ -230,35 +228,55 @@ header {
 .h-intro {
     padding: 50px 0;
     &-text {
-        text-align: center;
     }
 }
 
 .h-offers {
     margin-bottom: 70px;
+    
     &-cata {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
         .product-card {
-            height: 290px;
-            width: calc(50% - 10px);
-            box-sizing: border-box;
+            width: calc(50% - 10px); // 2 карточки в ряд с учётом gap (20px между)
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            background-color: $color-block;
             padding: 20px;
-
+            background-color: $color-block;
+            border-radius: 8px;
+            box-sizing: border-box;
             img {
                 height: 250px;
-            }   
-
-            p {
-                margin-left: 20px;
-                font-size: 20px;
+                width: auto;
+                object-fit: cover;
+                flex-shrink: 0;
+                border-radius: 4px;
+                margin-right: 20px; // отступ справа от картинки
+            }
+            .text-n-button {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                p {       // сбросим маргины для точного контроля
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+                button.add-to-cart {
+                    align-self: flex-start;   // центрируем по горизонтали
+                    margin-left: 30%;  // отступ снизу, если надо
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 8px;
+                    color: $color-block;
+                    font-size: 16px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: background-color 0.5s ease;
+                    background-color: $color-primary;
+                }
+                button:hover {
+                    background-color: $color-text;
+                }
             }
         }
     }

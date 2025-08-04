@@ -38,7 +38,6 @@ h2 {
 h3 {
   font-weight: 700;
   font-size: 24px;
-  text-align: center;
   margin: 1rem auto 2rem;
   color: #641B2E;
 }
@@ -163,7 +162,6 @@ header .header-container .user-panel a:hover svg {
 }
 .m-offers .m-music {
   border-radius: 10px;
-  height: 800px;
   background: color-mix(in srgb, #b2965e 85%, white);
 }
 
@@ -206,10 +204,6 @@ header .header-container .user-panel a:hover svg {
 .h-intro {
   padding: 50px 0;
 }
-.h-intro-text {
-  text-align: center;
-}
-
 .h-offers {
   margin-bottom: 70px;
 }
@@ -219,23 +213,46 @@ header .header-container .user-panel a:hover svg {
   gap: 20px;
 }
 .h-offers-cata .product-card {
-  height: 290px;
   width: calc(50% - 10px);
-  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: #f03d3d;
   padding: 20px;
+  background-color: #f03d3d;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 .h-offers-cata .product-card img {
   height: 250px;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 4px;
+  margin-right: 20px;
 }
-.h-offers-cata .product-card p {
-  margin-left: 20px;
-  font-size: 20px;
+.h-offers-cata .product-card .text-n-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.h-offers-cata .product-card .text-n-button p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.h-offers-cata .product-card .text-n-button button.add-to-cart {
+  align-self: flex-start;
+  margin-left: 30%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  color: #f03d3d;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  background-color: #8A2D3B;
+}
+.h-offers-cata .product-card .text-n-button button:hover {
+  background-color: #641B2E;
 }
 
 .h-leave {
