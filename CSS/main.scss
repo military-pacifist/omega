@@ -327,7 +327,19 @@ footer {
         p {
             text-align: start;
             font-size: 1.2rem;
-            color: $color-block;
+            color: $color-bg;
+            transition: color 2s ease;
+            span {
+                transition: color 2s ease;
+                transition: font-size 4s ease;
+            }
+        }
+        p:hover {
+            color: $color-text;
+            span {
+                color: $color-block;
+                font-size: 3rem;
+            }
         }
     }
 

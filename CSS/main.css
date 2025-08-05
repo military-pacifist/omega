@@ -380,7 +380,22 @@ footer .footer-box:first-child {
 footer .footer-box:first-child p {
   text-align: start;
   font-size: 1.2rem;
+  color: #b2965e;
+  -webkit-transition: color 2s ease;
+  transition: color 2s ease;
+}
+footer .footer-box:first-child p span {
+  -webkit-transition: color 2s ease;
+  transition: color 2s ease;
+  -webkit-transition: font-size 4s ease;
+  transition: font-size 4s ease;
+}
+footer .footer-box:first-child p:hover {
+  color: #641B2E;
+}
+footer .footer-box:first-child p:hover span {
   color: #f03d3d;
+  font-size: 3rem;
 }
 footer .footer-box:nth-child(2) {
   padding-left: 1.5rem;
