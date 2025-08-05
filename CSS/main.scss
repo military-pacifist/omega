@@ -211,28 +211,27 @@ header {
         }
     }
     .track-list {
-            display: flex;
-            flex-direction: column;
-            padding: 15px 0px;
-            width: 100%;
-        }
-        .hidden {
-            display: none;
-        }
-        
-        .track {
-            margin-bottom: 10px;
-        }
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0px;
+        width: 100%;
+    }
+    .hidden {
+        display: none;
+    }
+    .track {
+        margin-bottom: 10px;
+    }
 }
 
 .h-intro {
-    padding: 50px 0;
+    padding-bottom: 2rem;
     &-text {
     }
 }
 
 .h-offers {
-    margin-bottom: 70px;
+    margin-bottom: 2rem;
     
     &-cata {
         display: flex;
@@ -283,7 +282,24 @@ header {
 }
 
 .h-leave {
-    margin-bottom: 70px;
+    margin-bottom: 2rem;
+    p {
+        margin-bottom: 2rem;
+    }
+    button {
+        padding: 20px;
+        border: none;
+        border-radius: 8px;
+        color: $color-bg;
+        font-weight: 400;
+        font-size: 30px;
+        cursor: pointer;
+        transition: background-color 0.5s ease;
+        background-color: $color-primary;
+    }
+    button:hover {
+        background-color: $color-text;
+    }
 }
 
 footer {

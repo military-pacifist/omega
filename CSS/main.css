@@ -254,10 +254,10 @@ header .header-container .user-panel a:hover svg {
 }
 
 .h-intro {
-  padding: 50px 0;
+  padding-bottom: 2rem;
 }
 .h-offers {
-  margin-bottom: 70px;
+  margin-bottom: 2rem;
 }
 .h-offers-cata {
   display: -webkit-box;
@@ -324,7 +324,25 @@ header .header-container .user-panel a:hover svg {
 }
 
 .h-leave {
-  margin-bottom: 70px;
+  margin-bottom: 2rem;
+}
+.h-leave p {
+  margin-bottom: 2rem;
+}
+.h-leave button {
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  color: #b2965e;
+  font-weight: 400;
+  font-size: 30px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  background-color: #8A2D3B;
+}
+.h-leave button:hover {
+  background-color: #641B2E;
 }
 
 footer {
