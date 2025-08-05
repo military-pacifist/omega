@@ -184,51 +184,68 @@ header {
         border-radius: 10px;
         background: color-mix(in srgb, #{$color-bg} 85%, white)
     }
+    h3 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
 }
 
 .m-album {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
     padding: 10px;
-    
-    .album-wrapper {
+    .albums-container {
         display: flex;
-        cursor: pointer;
-        flex-direction: column;
-        padding: 10px 10px 30px;
-        border-radius: 10px;
-        transition: transform 0.3s ease;
-        img {
-            width: 100%;
-            max-width: 300px;
+        justify-content: left;
+        .album-wrapper {
+            flex: 0 0 auto;
+            cursor: pointer;
+            padding: 10px 10px 30px;
             border-radius: 10px;
-        }
-        
-        &:hover {
-            transform: scale(1.03);
-            background: color-mix(in srgb, #{$color-bg} 70%, white);
+            transition: transform 0.3s ease;
+            width: 280px;
+            img {
+                width: 100%;
+                max-width: 260px;
+                border-radius: 10px;
+            }
+            &:hover, &.active {
+                transform: scale(1.05);
+                background: color-mix(in srgb, #{$color-bg} 70%, white);
+            }
         }
     }
+    
     .track-list {
-            display: flex;
-            flex-direction: column;
-            padding: 15px 0px;
-            width: 100%;
+        display: none;
+        &.active { 
+            display: block;
+            background: color-mix(in srgb, #{$color-bg} 70%, white);
+            border-radius: 10px;
         }
-        .hidden {
-            display: none;
-        }
-        
+        animation: normal;
+        padding: 15px 0px;
+        width: 100%;
         .track {
             margin-bottom: 10px;
+            border-radius: 5px;
+            // background: white;
+            audio {
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                display: block;
+            }
         }
+    }
 }
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
 
 .h-intro {
     padding: 50px 0;
-    &-text {
-    }
 }
 
 .h-offers {
@@ -298,7 +315,7 @@ footer {
         justify-content: flex-start;
 
         h3 {
-            margin: 1rem 0 2rem;
+            margin-bottom: 2rem;
             font-size: 1.5rem;
             color: $color-block;
         }
@@ -319,6 +336,7 @@ footer {
         // background-color: red;
         padding-left: 1.5rem;
         width: 40%;
+
         a {
             display: block;
             font-size: 1.1rem;
