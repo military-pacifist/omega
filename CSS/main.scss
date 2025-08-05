@@ -249,7 +249,7 @@ header {
 }
 
 .h-offers {
-    margin-bottom: 70px;
+    margin-bottom: 2rem;
     
     &-cata {
         display: flex;
@@ -300,7 +300,24 @@ header {
 }
 
 .h-leave {
-    margin-bottom: 70px;
+    margin-bottom: 2rem;
+    p {
+        margin-bottom: 2rem;
+    }
+    button {
+        padding: 20px;
+        border: none;
+        border-radius: 8px;
+        color: $color-bg;
+        font-weight: 400;
+        font-size: 30px;
+        cursor: pointer;
+        transition: background-color 0.5s ease;
+        background-color: $color-primary;
+    }
+    button:hover {
+        background-color: $color-text;
+    }
 }
 
 footer {
@@ -328,7 +345,19 @@ footer {
         p {
             text-align: start;
             font-size: 1.2rem;
-            color: $color-block;
+            color: $color-bg;
+            transition: color 2s ease;
+            span {
+                transition: color 2s ease;
+                transition: font-size 4s ease;
+            }
+        }
+        p:hover {
+            color: $color-text;
+            span {
+                color: $color-block;
+                font-size: 3rem;
+            }
         }
     }
 
