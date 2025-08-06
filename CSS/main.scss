@@ -47,7 +47,7 @@ h3 {
 }
 p {
     font-weight: 400;
-    font-size: 30px;
+    font-size: 24px;
     color: $color-text;
 }
 
@@ -282,7 +282,7 @@ header {
 }
 
 .h-leave {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     p {
         margin-bottom: 2rem;
     }
@@ -329,6 +329,7 @@ footer {
             font-size: 1.2rem;
             color: $color-bg;
             transition: color 2s ease;
+            cursor: pointer;
             span {
                 transition: color 2s ease;
                 transition: font-size 4s ease;
@@ -347,11 +348,22 @@ footer {
         // background-color: red;
         padding-left: 1.5rem;
         width: 40%;
-        a {
+        .faq_answer {
+            display: none;
+            margin-top: 10px;
+            color: $color-primary;
+        }
+        .faq_item.active .faq_answer {
             display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .faq_question {
             font-size: 1.1rem;
             text-decoration: none;
             color: $color-bg;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px 0;
         }
     }
 

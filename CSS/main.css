@@ -51,7 +51,7 @@ h3 {
 
 p {
   font-weight: 400;
-  font-size: 30px;
+  font-size: 24px;
   color: #641B2E;
 }
 
@@ -324,7 +324,7 @@ header .header-container .user-panel a:hover svg {
 }
 
 .h-leave {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .h-leave p {
   margin-bottom: 2rem;
@@ -383,6 +383,7 @@ footer .footer-box:first-child p {
   color: #b2965e;
   -webkit-transition: color 2s ease;
   transition: color 2s ease;
+  cursor: pointer;
 }
 footer .footer-box:first-child p span {
   -webkit-transition: color 2s ease;
@@ -401,11 +402,23 @@ footer .footer-box:nth-child(2) {
   padding-left: 1.5rem;
   width: 40%;
 }
-footer .footer-box:nth-child(2) a {
+footer .footer-box:nth-child(2) .faq_answer {
+  display: none;
+  margin-top: 10px;
+  color: #8A2D3B;
+}
+footer .footer-box:nth-child(2) .faq_item.active .faq_answer {
   display: block;
+  -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+}
+footer .footer-box:nth-child(2) .faq_question {
   font-size: 1.1rem;
   text-decoration: none;
   color: #b2965e;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 0;
 }
 footer .footer-box:last-child {
   width: 20%;
