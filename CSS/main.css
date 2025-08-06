@@ -344,14 +344,16 @@ footer .footer-box:nth-child(2) {
   padding-left: 1.5rem;
   width: 40%;
 }
-footer .footer-box:nth-child(2) a {
+footer .footer-box:nth-child(2) .faq_answer {
+  display: none;
+  margin-top: 10px;
+  color: #444;
+}
+footer .footer-box:nth-child(2) .faq_item.active .faq_answer {
   display: block;
   animation: fadeIn 0.3s ease-in-out;
 }
 footer .footer-box:nth-child(2) .faq_question {
-  font-size: 1.1rem;
-  text-decoration: none;
-  color: #000000;
   cursor: pointer;
   font-weight: bold;
   padding: 10px 0;
