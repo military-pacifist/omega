@@ -12,20 +12,13 @@ body {
 }
 
 main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .wrapper {
   background-color: #000000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -39,44 +32,36 @@ h2 {
   font-size: 36px;
   text-align: left;
   margin: 1rem auto 2rem;
-  color: #CF0F47;
+  color: #FFDEDE;
 }
 
 h3 {
   font-weight: 700;
   font-size: 24px;
   margin: 1rem auto 2rem;
-  color: #000000;
+  color: #FFDEDE;
 }
 
 p {
   font-weight: 400;
   font-size: 24px;
-  color: #000000;
+  color: #FFDEDE;
 }
 
 header {
   width: 100%;
   background: #CF0F47;
-  color: #000000;
+  color: #FFDEDE;
 }
 header .header-container {
   max-width: 1400px;
   margin: 0 auto;
   min-height: 3rem;
   padding: 0 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
 }
 header .header-container .logo {
   margin-right: 2rem;
@@ -85,53 +70,35 @@ header .header-container .logo {
   white-space: nowrap;
 }
 header .header-container nav .menu {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 header .header-container nav .menu li {
   margin: 0 0.5rem;
 }
 header .header-container nav .menu li a {
-  color: #000000;
+  color: #FFDEDE;
   padding: 1rem 1rem;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 header .header-container nav .menu li a:hover {
-  background-color: #FF0B55;
+  background-color: #CF0F47;
   border-radius: 4px;
 }
 header .header-container .user-panel {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 1.5rem;
 }
 header .header-container .user-panel a {
   display: block;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 36px;
   height: 36px;
   text-decoration: none;
-  -webkit-transition: stroke 0.2s ease-in-out;
   transition: stroke 0.2s ease-in-out;
 }
 header .header-container .user-panel svg {
@@ -140,12 +107,12 @@ header .header-container .user-panel svg {
   stroke: #2D3436;
 }
 header .header-container .user-panel a:hover svg {
-  stroke: #FF0B55;
+  stroke: #CF0F47;
   cursor: pointer;
 }
 
 .elegant-quote {
-  background-color: #FF0B55;
+  background-color: #CF0F47;
   border-radius: 15px;
   padding: 2rem;
   max-width: 360px;
@@ -162,14 +129,14 @@ header .header-container .user-panel a:hover svg {
   padding: 0 12px;
   font-size: 1.4rem;
   line-height: 1.6;
-  color: #000000;
+  color: #FFDEDE;
   text-align: center;
   margin-bottom: 1.5rem;
   position: relative;
 }
 .elegant-quote .quote-text::before {
   font-size: 3rem;
-  color: #000000;
+  color: #FFDEDE;
   position: absolute;
   content: "“";
   top: -1rem;
@@ -177,14 +144,14 @@ header .header-container .user-panel a:hover svg {
 }
 .elegant-quote .quote-text::after {
   font-size: 3rem;
-  color: #000000;
+  color: #FFDEDE;
   position: absolute;
   content: "”";
   bottom: -2rem;
   right: -1.5rem;
 }
 .elegant-quote .quote-author {
-  color: #000000;
+  color: #FFDEDE;
   display: block;
   letter-spacing: 0.5px;
   text-align: right;
@@ -195,7 +162,7 @@ header .header-container .user-panel a:hover svg {
 }
 .m-offers .m-music {
   border-radius: 10px;
-  background: #FF0B55;
+  background: #CF0F47;
 }
 .m-offers h3 {
   text-align: center;
@@ -206,24 +173,15 @@ header .header-container .user-panel a:hover svg {
   padding: 10px;
 }
 .m-album .albums-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  justify-content: left;
 }
 .m-album .albums-container .album-wrapper {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  flex: 0 0 auto;
   cursor: pointer;
   padding: 10px 10px 30px;
   border-radius: 10px;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   width: 280px;
 }
 .m-album .albums-container .album-wrapper img {
@@ -232,20 +190,18 @@ header .header-container .user-panel a:hover svg {
   border-radius: 10px;
 }
 .m-album .albums-container .album-wrapper:hover, .m-album .albums-container .album-wrapper.active {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  background: color-mix(in srgb, #FF0B55 70%, white);
+  transform: scale(1.05);
+  background: color-mix(in srgb, #CF0F47 70%, white);
 }
 .m-album .track-list {
   display: none;
-  -webkit-animation: normal;
-          animation: normal;
+  animation: normal;
   padding: 15px 0px;
   width: 100%;
 }
 .m-album .track-list.active {
   display: block;
-  background: color-mix(in srgb, #FF0B55 70%, white);
+  background: color-mix(in srgb, #CF0F47 70%, white);
   border-radius: 10px;
 }
 .m-album .track-list .track {
@@ -259,29 +215,14 @@ header .header-container .user-panel a:hover svg {
   display: block;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 .h-intro {
@@ -292,67 +233,51 @@ header .header-container .user-panel a:hover svg {
   margin-bottom: 2rem;
 }
 .h-offers-cata {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .h-offers-cata .product-card {
   width: calc(50% - 10px);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 20px;
-  background-color: #FF0B55;
+  background-color: #CF0F47;
   border-radius: 8px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .h-offers-cata .product-card img {
   height: 250px;
   width: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   border-radius: 4px;
   margin-right: 20px;
 }
 .h-offers-cata .product-card .text-n-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .h-offers-cata .product-card .text-n-button p {
   font-size: 16px;
   line-height: 1.5;
 }
 .h-offers-cata .product-card .text-n-button button.add-to-cart {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   margin-left: 30%;
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
-  color: #FF0B55;
+  color: #CF0F47;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   background-color: #CF0F47;
 }
 .h-offers-cata .product-card .text-n-button button:hover {
-  background-color: #000000;
+  background-color: #FFDEDE;
 }
 
 .h-leave {
@@ -369,41 +294,29 @@ header .header-container .user-panel a:hover svg {
   font-weight: 400;
   font-size: 30px;
   cursor: pointer;
-  -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   background-color: #CF0F47;
 }
 .h-leave button:hover {
-  background-color: #000000;
+  background-color: #FFDEDE;
 }
 
 footer {
-  background-color: #000000;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: #FFDEDE;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   min-height: 8rem;
   padding: 2rem 4rem;
 }
 footer .footer-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 footer .footer-box h3 {
   margin-bottom: 2rem;
   font-size: 1.5rem;
-  color: #FF0B55;
+  color: #CF0F47;
 }
 footer .footer-box:first-child {
   padding-right: 2.5rem;
@@ -413,21 +326,18 @@ footer .footer-box:first-child p {
   text-align: start;
   font-size: 1.2rem;
   color: #000000;
-  -webkit-transition: color 2s ease;
   transition: color 2s ease;
   cursor: pointer;
 }
 footer .footer-box:first-child p span {
-  -webkit-transition: color 2s ease;
   transition: color 2s ease;
-  -webkit-transition: font-size 4s ease;
   transition: font-size 4s ease;
 }
 footer .footer-box:first-child p:hover {
-  color: #000000;
+  color: #FFDEDE;
 }
 footer .footer-box:first-child p:hover span {
-  color: #FF0B55;
+  color: #CF0F47;
   font-size: 3rem;
 }
 footer .footer-box:nth-child(2) {
@@ -436,8 +346,7 @@ footer .footer-box:nth-child(2) {
 }
 footer .footer-box:nth-child(2) a {
   display: block;
-  -webkit-animation: fadeIn 0.3s ease-in-out;
-          animation: fadeIn 0.3s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out;
 }
 footer .footer-box:nth-child(2) .faq_question {
   font-size: 1.1rem;
@@ -449,25 +358,16 @@ footer .footer-box:nth-child(2) .faq_question {
 }
 footer .footer-box:last-child {
   width: 20%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 footer .footer-box:last-child h3 {
   text-align: center;
 }
 footer .footer-box:last-child .footer-box-logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 0.8rem;
   width: 152px;
   line-height: 0;

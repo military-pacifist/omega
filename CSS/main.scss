@@ -1,7 +1,7 @@
 $color-primary: #CF0F47;
 $color-bg: #000000;
-$color-text: #000000;
-$color-block: #FF0B55;
+$color-text: #FFDEDE;
+$color-block: #CF0F47;
 
 * {
     margin: 0;
@@ -36,7 +36,8 @@ h2 {
     font-size: 36px;
     text-align: left;
     margin: 1rem auto 2rem;
-    color: $color-primary;
+    color: $color-text;
+    
 }
 
 h3 {
