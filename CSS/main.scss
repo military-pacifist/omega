@@ -1,7 +1,7 @@
-$color-primary: #8A2D3B;
-$color-bg: #b2965e;
-$color-text: #641B2E;
-$color-block: #f03d3d;
+$color-primary: #CF0F47;
+$color-bg: #000000;
+$color-text: #000000;
+$color-block: #FF0B55;
 
 * {
     margin: 0;
@@ -53,8 +53,8 @@ p {
 
 header {
     width: 100%;
-    background: #6C5CE7;
-    color: #FFFFFF;
+    background: $color-primary;
+    color: $color-text;
     
     .header-container {
         max-width: 1400px;
@@ -81,12 +81,12 @@ header {
                 li {
                     margin: 0 0.5rem;
                     a {
-                        color: #FFFFFF;
+                        color: $color-text;
                         padding: 1rem 1rem;
                         transition: all 0.2s ease-in-out;
                         
                         &:hover {
-                            background-color: #81ecec59;
+                            background-color: $color-block;
                             border-radius: 4px;
                         }
                     }
@@ -119,7 +119,7 @@ header {
             }
     
             a:hover svg {
-            stroke: #81ecec59;
+            stroke: $color-block;
             cursor: pointer;
             }
         }
@@ -128,7 +128,7 @@ header {
 }
 
 .elegant-quote {
-    background-color: #81ECEC;
+    background-color: $color-block;
     border-radius: 15px; 
     padding: 2rem;
     max-width: 360px;
@@ -146,14 +146,14 @@ header {
         padding: 0 12px;
         font-size: 1.4rem;
         line-height: 1.6;
-        color: #FFFFFF;
+        color: $color-text;
         text-align:center;
         margin-bottom: 1.5rem;
         position: relative;
         
         &::before {
             font-size: 3rem;
-            color: #FFFFFF;
+            color: $color-text;
             position: absolute;
             content: "“";
             top: -1rem;
@@ -162,7 +162,7 @@ header {
 
         &::after {
             font-size: 3rem;
-            color: #FFFFFF;
+            color: $color-text;
             position: absolute;
             content: "”";
             bottom: -2rem;
@@ -171,7 +171,7 @@ header {
     }
 
     .quote-author {
-        color: #FFFFFF;
+        color: $color-text;
         display: block;
         letter-spacing: 0.5px;
         text-align: right;
@@ -182,7 +182,7 @@ header {
     margin-bottom: 70px;
     .m-music {
         border-radius: 10px;
-        background: color-mix(in srgb, #{$color-bg} 85%, white)
+        background: $color-block
     }
     h3 {
             text-align: center;
@@ -209,7 +209,7 @@ header {
             }
             &:hover, &.active {
                 transform: scale(1.05);
-                background: color-mix(in srgb, #{$color-bg} 70%, white);
+                background: color-mix(in srgb, #{$color-block} 70%, white);
             }
         }
     }
@@ -218,7 +218,7 @@ header {
         display: none;
         &.active { 
             display: block;
-            background: color-mix(in srgb, #{$color-bg} 70%, white);
+            background: color-mix(in srgb, #{$color-block} 70%, white);
             border-radius: 10px;
         }
         animation: normal;
