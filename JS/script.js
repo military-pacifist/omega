@@ -25,11 +25,20 @@ document.addEventListener('DOMContentLoaded', function() {
             `.track-list[data-album-id="${albumId}"]`
         );
 
-        if (selectedTrackList) {
+        if (selectedTrackList) { 
             selectedTrackList.classList.add('active');
         }
         if (selectedAlbum) {
             selectedAlbum.classList.add('active');
         }
     }
+});
+
+const faqItems = document.querySelectorAll('.faq_item');
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq_question');
+    question.addEventListener('click', () => {
+        faqItems.forEach(i => i.classList.remove('active')); // Закрыть все ответы
+        item.classList.add('active'); // Открыть текущий
+    });
 });

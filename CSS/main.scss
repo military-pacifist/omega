@@ -366,20 +366,23 @@ footer {
         // background-color: red;
         padding-left: 1.5rem;
         width: 40%;
-        a {
+        .faq_answer {
+            display: none;
+            margin-top: 10px;
+            color: #444;
+        }
+
+        .faq_item.active .faq_answer {
             display: block;
             animation: fadeIn 0.3s ease-in-out;
         }
+
         .faq_question {
-            font-size: 1.1rem;
-            text-decoration: none;
-            color: $color-bg;
             cursor: pointer;
             font-weight: bold;
             padding: 10px 0;
         }
     }
-
     .footer-box:last-child {
         // background-color: darkblue;
         width: 20%;
