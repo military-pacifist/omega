@@ -1,4 +1,10 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "customFont";
+  src: url("/font/regular/EternaBreaks-Regular_0.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +15,7 @@
 
 body {
   height: 100%;
+  font-family: "customFont", sans-serif;
 }
 
 main {
@@ -32,7 +39,7 @@ h2 {
   font-size: 36px;
   text-align: left;
   margin: 1rem auto 2rem;
-  color: #FFDEDE;
+  color: #762b40;
 }
 
 h3 {
@@ -50,7 +57,7 @@ p {
 
 header {
   width: 100%;
-  background: #CF0F47;
+  background: #762b40;
   color: #FFDEDE;
 }
 header .header-container {
@@ -83,7 +90,7 @@ header .header-container nav .menu li a {
   transition: all 0.2s ease-in-out;
 }
 header .header-container nav .menu li a:hover {
-  background-color: #CF0F47;
+  background-color: color-mix(in srgb, #CF0F47 70%, white);
   border-radius: 4px;
 }
 header .header-container .user-panel {
@@ -104,10 +111,10 @@ header .header-container .user-panel a {
 header .header-container .user-panel svg {
   width: 24px;
   height: 24px;
-  stroke: #2D3436;
+  stroke: #FFDEDE;
 }
 header .header-container .user-panel a:hover svg {
-  stroke: #CF0F47;
+  stroke: color-mix(in srgb, #CF0F47 70%, white);
   cursor: pointer;
 }
 
@@ -170,27 +177,40 @@ header .header-container .user-panel a:hover svg {
 }
 
 .m-album {
-  padding: 10px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .m-album .albums-container {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 5px;
 }
 .m-album .albums-container .album-wrapper {
-  flex: 0 0 auto;
+  flex: 1 0 auto;
+  min-width: 200px;
+  max-width: calc(25% - 15px);
   cursor: pointer;
-  padding: 10px 10px 30px;
+  padding: 5px 5px 30px;
   border-radius: 10px;
   transition: transform 0.3s ease;
   width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .m-album .albums-container .album-wrapper img {
   width: 100%;
-  max-width: 260px;
+  margin: 0 auto;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
   border-radius: 10px;
 }
 .m-album .albums-container .album-wrapper:hover, .m-album .albums-container .album-wrapper.active {
-  transform: scale(1.05);
+  transform: scale(1.06);
   background: color-mix(in srgb, #CF0F47 70%, white);
 }
 .m-album .track-list {
@@ -200,6 +220,7 @@ header .header-container .user-panel a:hover svg {
   width: 100%;
 }
 .m-album .track-list.active {
+  transform: scale(1.01);
   display: block;
   background: color-mix(in srgb, #CF0F47 70%, white);
   border-radius: 10px;
@@ -274,7 +295,7 @@ header .header-container .user-panel a:hover svg {
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.5s ease;
-  background-color: #CF0F47;
+  background-color: #762b40;
 }
 .h-offers-cata .product-card .text-n-button button:hover {
   background-color: #FFDEDE;
@@ -295,7 +316,7 @@ header .header-container .user-panel a:hover svg {
   font-size: 30px;
   cursor: pointer;
   transition: background-color 0.5s ease;
-  background-color: #CF0F47;
+  background-color: #762b40;
 }
 .h-leave button:hover {
   background-color: #FFDEDE;

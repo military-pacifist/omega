@@ -2,10 +2,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const albumWrappers = document.querySelectorAll('.album-wrapper');
     const trackLists = document.querySelectorAll('.track-list');
 
+    let currentlyActiveAlbumId = null;
+
     albumWrappers.forEach(wrapper => {
         wrapper.addEventListener('click', function() {
-            const albumId = this.dataset.albumId
-            showTracks(albumId)
+            const albumId = this.dataset.albumId;
+            if (currentlyActiveAlbumId === albumId) {
+                hideAllTracks();
+            currentlyActiveAlbumId = null;
+            }
+            else {
+                currentlyActiveAlbumId = albumId;
+                showTracks(albumId);
+            }
         });
     });
 
@@ -30,9 +39,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (selectedAlbum) {
             selectedAlbum.classList.add('active');
+            selectedTrackList.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
     }
+    function hideAllTracks() {
+        albumWrappers.forEach(wrapper => wrapper.classList.remove('active'));
+        trackLists.forEach(list => list.classList.remove('active'));
+    }
 });
+
+
 
 const faqItems = document.querySelectorAll('.faq_item');
 faqItems.forEach(item => {
